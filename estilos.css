@@ -1,7 +1,59 @@
 @charset "utf-8";
 /* CSS Document */
-
+body {
+	padding: 0px;
+}
 h1 {
-	color: rebeccapurple;
+	color: mediumpurple;
+	font-size: 60pt;
+	font-family: 'Concert One', cursive;
+}
+h2 {
+	color: mediumpurple;
+	font-size: 20pt;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
+}
+h3 {
+	color: mediumpurple;
 	font-size: 30pt;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 700;
+}
+img {
+	border: 5px dashed #9990c1;
+	border-radius: 20px;
+}
+#datos-matias {
+	width: 700px;
+	background-color: mediumpurple;
+	color: white;
+	border-radius: 20px;
+}
+#datos-matias span {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+#datos-matias ul li {
+	padding-left: 20px;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 700px;
+	list-style: none;
+}
+#datos-matias ul {
+	padding: 20px 0 20px 20px;
+}
+ul {
+	display: block;
+	list-style-type: disc;
+}
+li {
+	display: list-item;
+}
+.informacion_personal {
+	font-family: 'Kumbh Sans', sans-serif;
+}
+#parrafo-del-footer {
+	font-family: 'Kumbh Sans', sans-serif;
 }
