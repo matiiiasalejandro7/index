@@ -2,17 +2,25 @@
 /* CSS Document */
 body {
 	padding: 0px;
+	margin: 0px;
+}
+header {
+	height: 700px;
+	padding: 0 0 0 100px;
 }
 h1 {
 	color: mediumpurple;
 	font-size: 60pt;
+	padding-right: 10px;
 	font-family: 'Concert One', cursive;
+	display: inline;
 }
 h2 {
 	color: mediumpurple;
 	font-size: 20pt;
 	font-family: 'Kumbh Sans', sans-serif;
 	font-weight: 400;
+	display: inline;
 }
 h3 {
 	color: mediumpurple;
@@ -23,6 +31,7 @@ h3 {
 img {
 	border: 5px dashed #9990c1;
 	border-radius: 20px;
+	margin: 100px 0 0 10px;
 }
 #datos-matias {
 	width: 700px;
@@ -46,13 +55,18 @@ img {
 }
 ul {
 	display: block;
-	list-style-type: disc;
+	list-style-type: circle;
 }
 li {
 	display: list-item;
+	text-align: left;
 }
 .informacion_personal {
 	font-family: 'Kumbh Sans', sans-serif;
+}
+main {
+	padding: 0 0 50px 100px;
+	width: 800px;
 }
 #parrafo-del-footer {
 	font-family: 'Kumbh Sans', sans-serif;
