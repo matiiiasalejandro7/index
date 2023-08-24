@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
+* {
+	font-family: 'Kumbh Sans', sans-serif;
+}
 body {
 	padding: 0px;
 	margin: 0px;
@@ -7,28 +10,16 @@ body {
 header {
 	height: 700px;
 	padding: 0 0 0 100px;
-	/*tenés que poner background-image acá para que te cargue el fondo. después activá github pages para poder ver cómo va la página*/
 }
-
-/* cuando veas que hay datos que empiezan a repetirse en varios lugares podés plantear lo mismo para varios selectores separados por una coma, de la siguiente forma:
-
 h1, h2, h3 {
 	color: mediumpurple;
 }
-
-y las cosas que necesiten cosas particulares aparte, pero ya todos van a tener la misma propiedad y no vas a estar repitiendo líneas de código, por ej así:
-
 h1 {
-	font-size: 60pt;
+	font-size: 50pt;
 	padding-right: 10px;
 	font-family: 'Concert One', cursive;
 	display: inline;
 }
-
-h2, h3 {
-	font-family: 'Kumbh Sans', sans-serif;
-}
-
 h2 {
 	font-size: 20pt;
 	font-weight: 400;
@@ -36,39 +27,6 @@ h2 {
 }
 h3 {
 	font-size: 30pt;
-	font-weight: 700;
-}
-
-Ahora, es mucho más fácil elegir la tipo principal y establecerla en el selector universal * para que se aplique en todo el archivo y cuando tengas que cambiar en un lugar puntual lo establecés, por ejemplo:
-
-* {
-	font-family: 'Kumbh Sans', sans-serif;
-}
-
-h1 {
-	font-family: 'Concert One', cursive;
-}
-
-*/
-
-h1 {
-	color: mediumpurple;
-	font-size: 60pt;
-	padding-right: 10px;
-	font-family: 'Concert One', cursive;
-	display: inline;
-}
-h2 {
-	color: mediumpurple;
-	font-size: 20pt;
-	font-family: 'Kumbh Sans', sans-serif;
-	font-weight: 400;
-	display: inline;
-}
-h3 {
-	color: mediumpurple;
-	font-size: 30pt;
-	font-family: 'Kumbh Sans', sans-serif;
 	font-weight: 700;
 }
 img {
@@ -83,13 +41,11 @@ img {
 	border-radius: 20px;
 }
 #datos-matias span {
-	font-family: 'Kumbh Sans', sans-serif;
 	font-weight: 400;
 	font-style: normal;
 }
 #datos-matias ul li {
 	padding-left: 20px;
-	font-family: 'Kumbh Sans', sans-serif;
 	font-weight: 700px;
 	list-style: none;
 }
@@ -104,13 +60,7 @@ li {
 	display: list-item;
 	text-align: left;
 }
-.informacion_personal {
-	font-family: 'Kumbh Sans', sans-serif;
-}
 main {
 	padding: 0 0 50px 100px;
 	width: 800px;
-}
-#parrafo-del-footer {
-	font-family: 'Kumbh Sans', sans-serif;
 }
