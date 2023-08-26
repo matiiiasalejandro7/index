@@ -85,3 +85,9 @@ main {
 	padding: 0 0 50px 100px;
 	width: 800px;
 }
+* {
+	cursor: url("img/cursor.png"), auto;
+}
+a {
+	text-decoration: none;
+}
