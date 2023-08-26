@@ -7,9 +7,25 @@ body {
 	padding: 0px;
 	margin: 0px;
 }
-header {
-	height: 700px;
-	padding: 0 0 0 100px;
+#outer-container {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+}
+#container {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: lavender;
+}
+#container_footer {
+	display: flex;;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
 }
 h1, h2, h3 {
 	color: mediumpurple;
@@ -31,7 +47,7 @@ h3 {
 }
 img {
 	border: 5px dashed #9990c1;
-	border-radius: 20px;
+	border-radius: 50px;
 	margin: 100px 0 0 10px;
 }
 #datos-matias {
@@ -39,6 +55,7 @@ img {
 	background-color: mediumpurple;
 	color: white;
 	border-radius: 20px;
+	margin-top: 10px;
 }
 #datos-matias span {
 	font-weight: 400;
@@ -59,6 +76,10 @@ ul {
 li {
 	display: list-item;
 	text-align: left;
+}
+p {
+	padding: none;
+	margin-right: 50px;
 }
 main {
 	padding: 0 0 50px 100px;
