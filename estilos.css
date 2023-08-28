@@ -21,7 +21,7 @@ body {
 	background-color: lavender;
 }
 #container_footer {
-	display: flex;;
+	display: flex;; /*                  guarda!*/
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -34,7 +34,7 @@ h1 {
 	font-size: 50pt;
 	padding-right: 10px;
 	font-family: 'Concert One', cursive;
-	display: inline;
+	display: inline; /* empezá a cambiar el inline por flexbox*/
 }
 h2 {
 	font-size: 20pt;
@@ -87,7 +87,7 @@ main {
 }
 * {
 	cursor: url("img/cursor.png"), auto;
-}
+} /*ya tenés especificado el selector universal (*) en la línea 3*/
 a {
 	text-decoration: none;
 }
