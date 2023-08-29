@@ -4,6 +4,14 @@
 	font-family: 'Kumbh Sans', sans-serif;
 	cursor: url("img/cursor.png"), auto;
 }
+
+/* A nivel diseño, la longitud de la línea de texto del texto de lectura es muy largo, hay que hacer algún ajuste de ancho para que no se haga molesto para las personas usuarias. También hay que ajustar los paddings de los títulos de las secciones, al tener la misma distancia entre el texto anterior y el siguiente es confuso entender a cuál corresponden, repasar las leyes de la gestalt, además son muy grandes en comparación al texto. Las listas tienen los items muy juntos, haría falta unos paddings.
+
+Para seguir ampliando el trabajo hay dos cosas que pueden optimizar más el trabajo. La primera, es hacer un segundo cursor para las instancias en las que hay objetos "clickeables" para dar un indicio de eso, o agregar la pseudoclase :hover a los elementos para que tengan algún cambio. La segunda es buscar sobre la medida de em para las tipografías y dejar de trabajar en px, podés googlear "em font size" para empezar a aplicarlo.
+
+Por último, en el footer como convención los tamaños tipográficos son los más pequeños que pueden aparecer. Hay más anotaciones en el archivo.
+*/
+
 body {
 	padding: 0px 300px 0px 300px;
 	display: flex;
@@ -22,7 +30,7 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
-}
+}                                                /*muy buenoo*/
 header, main, footer {
 	background-color: lavender;
 	align-content: stretch;
@@ -55,7 +63,7 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 50px 150px 0px 30px;
+	margin: 50px 150px 0px 30px; /* como regla general, si un padding o margin supera los 100px lo más probable es que haya otra opción más prolija para hacerlo. Esto va a empezar a notarse en las versiones mobile. Si lo que buscás es limitar el tamaño de las columnas, podés probar con la propiedad de max-width, el resto lo hace flexbox */
 }
 h1, h2, h3 {
 	color: mediumpurple;
@@ -64,7 +72,7 @@ h1 {
 	font-size: 50pt;
 	padding-right: 10px;
 	font-family: 'Concert One', cursive;
-	display: inline; /* empezá a cambiar el inline por flexbox*/
+	display: inline; /*           empezá a cambiar el inline por flexbox*/
 }
 h2 {
 	font-size: 20pt;
@@ -80,7 +88,7 @@ img {
 	border-radius: 50px;
 }
 #datos-matias {
-	width: 700px;
+	width: 700px; /* los anchos fijos son contraproducentes para pasar a mobile, es mejor usar porcentajes o max-width, cambialos en todos los lugares donde tengas anchos mayores a 200px*/
 	background-color: mediumpurple;
 	color: white;
 	border-radius: 20px;
