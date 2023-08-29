@@ -24,7 +24,6 @@ body {
 	}
 }
 header, main, footer {
-	width: 100%;
 	background-color: lavender;
 	align-content: stretch;
 }
@@ -114,7 +113,6 @@ p {
 }
 main {
 	padding: 0 0 50px 100px;
-	width: 1204px;
 }
 a {
 	text-decoration: none;
