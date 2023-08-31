@@ -4,19 +4,11 @@
 	font-family: 'Kumbh Sans', sans-serif;
 	cursor: url("img/cursor.png"), auto;
 }
-
-/* A nivel diseño, la longitud de la línea de texto del texto de lectura es muy largo, hay que hacer algún ajuste de ancho para que no se haga molesto para las personas usuarias. También hay que ajustar los paddings de los títulos de las secciones, al tener la misma distancia entre el texto anterior y el siguiente es confuso entender a cuál corresponden, repasar las leyes de la gestalt, además son muy grandes en comparación al texto. Las listas tienen los items muy juntos, haría falta unos paddings.
-
-Para seguir ampliando el trabajo hay dos cosas que pueden optimizar más el trabajo. La primera, es hacer un segundo cursor para las instancias en las que hay objetos "clickeables" para dar un indicio de eso, o agregar la pseudoclase :hover a los elementos para que tengan algún cambio. La segunda es buscar sobre la medida de em para las tipografías y dejar de trabajar en px, podés googlear "em font size" para empezar a aplicarlo.
-
-Por último, en el footer como convención los tamaños tipográficos son los más pequeños que pueden aparecer. Hay más anotaciones en el archivo.
-*/
-
 body {
 	padding: 0px 300px 0px 300px;
 	display: flex;
 	flex-direction: column;
-	background: linear-gradient(60deg, ghostwhite, #f3d8ff, #dac3fa, #bbb0f7, #92a0f4);
+	background: linear-gradient(60deg, ghostwhite, #f3d8ff, #dac3fa, #bbb0f7, #92a0f4, mediumpurple);
 	background-size: 250% 250%;
 	animation: gradient 5s ease infinite;
 }
@@ -30,13 +22,18 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
-}                                                /*muy buenoo*/
-header, main, footer {
+}
+main, footer {
+	background-color: white;
+	align-content: stretch;
+}
+header {
 	background-color: lavender;
 	align-content: stretch;
 }
 footer {
 	width: 100%;
+	font-size: 10pt;
 	height: 20px;
 	padding-bottom: 10px;
 	padding-top: 10px;
@@ -53,17 +50,21 @@ footer {
 }
 .container {
 	display: flex;
-	margin: 0 auto;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
+	margin-top: 40px;
+	margin-left: 50px;
+	margin-bottom: 60px;
+}
+.texto {
+	align-self: center;
 }
 .informacion_contenedores {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	margin: 50px 150px 0px 30px; /* como regla general, si un padding o margin supera los 100px lo más probable es que haya otra opción más prolija para hacerlo. Esto va a empezar a notarse en las versiones mobile. Si lo que buscás es limitar el tamaño de las columnas, podés probar con la propiedad de max-width, el resto lo hace flexbox */
+	justify-content: space-evenly;
+	margin: 50px 0px 0px 0px;
+}
+.informacion1 {
+	max-width: 45%;
 }
 h1, h2, h3 {
 	color: mediumpurple;
@@ -72,27 +73,80 @@ h1 {
 	font-size: 50pt;
 	padding-right: 10px;
 	font-family: 'Concert One', cursive;
-	display: inline; /*           empezá a cambiar el inline por flexbox*/
+	display: flex;
+	flex-direction: row;
+}
+@keyframes fade-in {
+	0%,50% {
+		opacity: 0;
+	}
 }
 h2 {
-	font-size: 20pt;
-	font-weight: 400;
-	display: inline;
+	font-size: 50pt;
+	font-weight: 700;
+	margin: 60px 0px 20px 100px;
+	padding-left: 55px;
 }
 h3 {
-	font-size: 30pt;
+	font-size: 24pt;
 	font-weight: 700;
+	margin-bottom: 5px;
+	margin-top: 40px;
 }
-img {
-	border: 5px dashed #9990c1;
-	border-radius: 50px;
+h3:hover {
+  color: hotPink;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+  h3 {
+    background-color: mediumpurple;
+    background-image: -webkit-linear-gradient(left, #B589D6 0%, #DF9DDD 25%, #804FB3 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+  h3:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+h3, ul {
+	padding: 0;
+}
+h2:hover {
+  color: hotPink;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+  h2 {
+    background-color: mediumpurple;
+    background-image: -webkit-linear-gradient(left, #B589D6 0%, #DF9DDD 25%, #804FB3 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+  h2:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+}
+ img {
+	margin-left: 100px;
+	margin-right: 65px;
+	margin-top: 40px;
+}
+img, h1, #datos-matias, .informacion1, .informacion2, .botonera, .portfolio {
+	animation: fade-in 1.25s ease;
 }
 #datos-matias {
-	width: 700px; /* los anchos fijos son contraproducentes para pasar a mobile, es mejor usar porcentajes o max-width, cambialos en todos los lugares donde tengas anchos mayores a 200px*/
+	width: 145%;
 	background-color: mediumpurple;
 	color: white;
-	border-radius: 20px;
-	margin-top: 10px;
+	border-radius: 35px;
 }
 #datos-matias span {
 	font-weight: 400;
@@ -109,10 +163,12 @@ img {
 ul {
 	display: block;
 	list-style-type: circle;
+	margin-top: 0px;
 }
 li {
 	display: list-item;
 	text-align: left;
+	padding-top: 7px;
 }
 p {
 	padding: none;
@@ -120,8 +176,88 @@ p {
 	color: black;
 }
 main {
-	padding: 0 0 50px 100px;
+	padding: 0 0 50px 0px;
 }
 a {
 	text-decoration: none;
+}
+.links::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 1px;
+	background: mediumpurple;
+	transition: width .3s;
+}
+.links:hover::after {
+	width: 70%;
+	transition: width .3s;
+}
+.botonera {
+	list-style: none;
+	max-height: 50px;
+	padding: 10px;
+	margin: 35px 100px 0px 100px;
+	background-color: mediumpurple;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: space-around;
+	justify-content: center;
+}
+.botonera a {
+	color: white;
+}
+.botonera a:hover {
+	color: rebeccapurple;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+ 	h3 {
+	background-color: mediumpurple;
+	background-position: 100% 0;
+	background-size: 200% 200%;
+	color: transparent;
+	-webkit-transition: .1s .2s;
+	-webkit-background-clip: text;
+	}
+	h3:hover {
+	background-position: 0 0;
+	color: transparent;
+	transition: .4s 0;
+	}
+}
+.botonera ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: space-around;
+	height: 50px;
+	gap: 70px;
+	font-size: 15pt;
+	margin-top: 10px;
+}
+nav ul {
+	list-style: none;
+}
+.columnas-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 100%;
+}
+.columnas-container h3 {
+	margin: 25px 0px 0px 100px;
+}
+.columnas-container p {
+	margin: 10px 100px 0px 100px;
+}
+.columna {
+	padding: 10px;
+	box-sizing: border-box;
+	width: 50%;
+}
+.columna a {
+	color: mediumpurple;
 }
