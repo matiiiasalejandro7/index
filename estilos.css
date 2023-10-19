@@ -197,7 +197,7 @@ a {
 	list-style: none;
 	max-height: 50px;
 	padding: 10px;
-	margin: 35px 100px 0px 100px;
+	margin: 35px 60px 0px 100px;
 	background-color: mediumpurple;
 	border-radius: 25px;
 	display: flex;
@@ -205,6 +205,8 @@ a {
 	align-items: center;
 	align-content: space-around;
 	justify-content: center;
+	position: sticky;
+	top: 40px;
 }
 .botonera a {
 	color: white;
@@ -260,4 +262,80 @@ nav ul {
 }
 .columna a {
 	color: mediumpurple;
+}
+
+/* form */
+
+form{
+	padding-left: 100px;
+	padding-top: 50px;
+}
+form {
+  opacity: 0;
+}
+form:nth-child(1) {
+  animation-name: testanim;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes testanim {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+label {
+	width:30%;
+	display: inline-block;
+}
+
+.divisionesform {
+	margin: 10px;
+	padding: 10px 0px 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+input, textarea {
+	width: 30%;
+	border: none;
+	background: #ccc;
+	padding:10px;
+	outline: none;
+	height: 30px;
+}
+
+textarea {
+	height: 100px;
+}
+
+input:hover, textarea:hover {
+	background: #aaa;
+}
+
+
+input:focus, textarea:focus {
+	background: mediumpurple;
+}
+
+button {
+	background: mediumpurple;
+	border: none;
+	padding: 5px;
+	color:white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+button:hover {
+	background: #4B0082; 
+}
+
+button:active {
+	background: #9874D3;
 }

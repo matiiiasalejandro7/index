@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Matias Ramirez CV</title>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link href="estilos.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Kumbh+Sans:wght@200;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="botonera">
+			<ul class="itemsbotonera">
+				<li><a href="#sobremi" target="_self">Sobre mí</a></li>
+				<li><a href="#educacion" target="_self">Educación</a></li>
+				<li><a href="#experiencia" target="_self">Experiencia</a></li>
+				<li><a href="#habilidades" target="_self">Habilidades</a></li>
+				<li><a href="#redes" target="_self">Redes Sociales</a></li>
+				<li><a href="#seccion2" target="_self">Portfolio</a></li>
+				<li><a href="contacto.html" class="links" target="_blank" >Contacto</a></li>
+			</ul>
+		</nav>
+		<div class="container">
+			<img class="fotomia" src="img/foto_matias.jpg" width="250px" height="250px" alt="Imagen Principal">
+			<div class="texto">
+			<div id="titulo-principal">
+				<h1>Matias Ramirez</h1>
+			</div>
+			<div id="datos-matias">
+				<ul>
+					<li> <span>Domicilio:</span> "Llavallol, Buenos Aires" </li>
+					<li><span>Teléfono:</span> "+54 1138185097" </li>
+					<li> <span>Email de Contacto:</span> "matiiiasalejandro7@gmail.com" </li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<form action="/send_email.php" method="post">
+			<div class="divisionesform">
+				<label for="nombre">Nombre</label>
+				<input type="text" id="nombre" />
+			</div>
+			<div class="divisionesform">
+				<label for="mail">E-mail:</label>
+				<input type="email" id="mail" placeholder="tunombre@email.com" />
+			</div>
+			<div class="divisionesform">
+				<label for="msg">Mensaje:</label>
+				<textarea id="msg"></textarea>
+			</div>
+			<div class="botonform">
+			<button type="submit">Enviar</button>
+			</div>
+		</form>
+	</main>
+	<footer>
+		<p class="creditos">Curriculum Vitae para Computación III /// UNLa Todos los derechos reservados</p>
+	</footer>
+</body>
+</html>
