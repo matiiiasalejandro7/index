@@ -6,6 +6,17 @@
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<link href="estilos.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Kumbh+Sans:wght@200;400;500;700&display=swap" rel="stylesheet">
+	<script>
+		function cambiarDisplay(visibilidadNueva){
+			document.getElementById("galeria").style.display = visibilidadNueva
+		}
+		function mostrarGaleria(){
+			cambiarDisplay('flex')
+		}
+		function ocultarGaleria(){
+			cambiarDisplay('none')
+		}
+	</script>
 </head>
 <body>
 	<header>
@@ -87,28 +98,54 @@
 				<h2>Portfolio</h2>
 				<section class="columnas-container">
 					<article class="columna">
-						<img class="trabajos" src="img/ET2TP5.jpg" alt="et2tp5" width="400px" height="305px">
+						<a href="#foto-1" onClick="mostrarGaleria()"><img class="trabajos" src="img/ET2TP5.jpg" alt="et2tp5" width="400px" height="305px"></a>
 						<h3><a href="https://www.behance.net/gallery/161548199/LGBTQ-MUSIC-FESTIVAL-GROUP-PROJECT" class="links" target="blank">LGBTQ+ Music Festival </a></h3>
 						<p>Trabajo realizado para Espacio Tipográfico 2. Proyecto de Identidad de un festival de música ficticio.</p>
 					</article>
 					<article class="columna">
-						<img class="trabajos" src="img/behanceportadapostersvol1.jpg" alt="behance1" width="400px" height="305px">
+						<a href="#foto-2" onClick="mostrarGaleria()"><img class="trabajos" src="img/behanceportadapostersvol1.jpg" alt="behance1" width="400px" height="305px"></a>
 						<h3><a href="https://www.behance.net/gallery/140524617/POSTERS-FLYERS-COLLECTION-VOL-1" class="links" target="blank">Posters Vol.1</a></h3>
 						<p>Compilación de distintos diseños de afiches y posters realizados de forma freelance o casual dentro de los ultimos tres años</p>
 					</article>
 				</section>
 				<section class="columnas-container">
 					<article class="columna">
-						<img class="trabajos" src="img/behanceportadapostersvol2.jpg" alt="behance2" width="400px" height="305px">
+						<a href="#foto-3" onClick="mostrarGaleria()"><img class="trabajos" src="img/behanceportadapostersvol2.jpg" alt="behance2" width="400px" height="305px"></a>
 						<h3><a href="https://www.behance.net/gallery/148865245/POSTERS-FLYERS-COLLECTION-VOL-2" class="links" target="blank">Posters Vol.2</a></h3>
 						<p>Compilación de distintos diseños de afiches y posters actuales, realizados dentro de los ultimos dos años</p>
 					</article>
 					<article class="columna">
-						<img class="trabajos" src="img/behanceportadasalbums2.jpg" alt="behance3" width="400px" height="305px">
+						<a href="#foto-4" onClick="mostrarGaleria()"><img class="trabajos" src="img/behanceportadasalbums2.jpg" alt="behance3" width="400px" height="305px"></a>
 						<h3><a href="https://www.behance.net/gallery/147335337/Album-Covers-VOL2" class="links" target="blank">Cover Arts</a></h3>
 						<p>Compilación de distintos diseños de tapas de discos o cover arts más recientes, realizados dentro de los ultimos dos años</p>
 					</article>
 				</section>
+			</section> 
+			<section id="galeria">
+				<div class="fondo-galeria">
+				<ul id="galeria-oculta">
+				<li class="fraccion-galeria" id="foto-1">
+					<a href="#foto-4" class="primer-ultima-flecha"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+					<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGalería()">
+					<a href="#foto-2"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-2">
+					<a href="#foto-1"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+					<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGalería()">
+					<a href="#foto-3"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-3">
+					<a href="#foto-2"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+					<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGalería()">
+					<a href="#" class="primer-ultima-flecha"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				<li class="fraccion-galeria" id="foto-4">
+					<a href="#foto-3"><img src="img/back.svg" width="50px" height="50px" alt="Anterior"></a>
+					<img class="close" src="img/close.svg" alt="Cerrar" width="50px" height="50px" onClick="ocultarGalería()">
+					<a href="#foto-1"><img src="img/next.svg" width="50px" height="50px" alt="Siguiente"></a>
+				</li>
+				</ul>
+				</div>
 			</section>
 		</main>
 		<footer>
