@@ -7,6 +7,8 @@
 body {
 	display: flex;
 	flex-direction: column;
+	max-width: 1920px;
+	width: 100%;
 }
 @keyframes gradient {
 	0% {
@@ -408,4 +410,49 @@ button:active {
 	width: 100%;
 	height: 100vh;
 	z-index: 0;
+}
+
+/* video */
+
+.videoportfolio{
+	display: flex;
+	justify-content: center;
+	padding: 90px 70px 90px 70px;
+	align-items: center;
+	gap: 80px;
+	align-self: stretch;
+}
+.textovideo {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 20px 20px 20px;
+	gap: 30px 10px;
+	max-width: 900px;
+	width: 100%;
+}
+.textovideo h2{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 45pt;
+	padding: 0px;
+	margin: 0px;
+}
+
+.textovideo p{
+	display: flex;
+	padding-right: 3px;
+	align-items: flex-start;
+	gap: 10px;
+	color:#000000;
+}
+
+/* portfolio */
+
+.portfolio {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	max-width: 1920px;
+	width: 100%;
 }
