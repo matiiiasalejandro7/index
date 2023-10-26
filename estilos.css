@@ -5,12 +5,8 @@
 	cursor: url("img/cursor.png"), auto;
 }
 body {
-	padding: 0px 300px 0px 300px;
 	display: flex;
 	flex-direction: column;
-	background: linear-gradient(60deg, ghostwhite, #f3d8ff, #dac3fa, #bbb0f7, #92a0f4, mediumpurple);
-	background-size: 250% 250%;
-	animation: gradient 5s ease infinite;
 }
 @keyframes gradient {
 	0% {
@@ -28,7 +24,10 @@ main, footer {
 	align-content: stretch;
 }
 header {
-	background-color: lavender;
+	background: linear-gradient(60deg, ghostwhite, #f3d8ff, #dac3fa, #bbb0f7, #92a0f4, mediumpurple);
+	background-size: auto;
+	background-size: 250% 250%;
+	animation: gradient 5s ease infinite;
 	align-content: stretch;
 }
 footer {
@@ -206,7 +205,7 @@ a {
 	align-content: space-around;
 	justify-content: center;
 	position: sticky;
-	top: 40px;
+	top: 0px;
 }
 .botonera a {
 	color: white;
@@ -330,6 +329,9 @@ button {
 	color:white;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	max-width: 135px;
+	width: 100%;
+	font-size: 16pt;
 }
 
 button:hover {
@@ -340,14 +342,14 @@ button:active {
 	background: #9874D3;
 }
 
-/* galeria (no se como hacer para que la galeria al tocar la imagen se vea centrada, porque se va como al costado y no se por qué pasa eso, ademas el boton de close no funciona)*/
+/* galeria */
 
 #galeria {
 	display: none;
 	width: 100%;
 	justify-content: center;
 	height: 100vh;
-	background-color: #000000;
+	background-color: mediumpurple;
 	position: absolute;
 	top: 0;
 	z-index: 10;
@@ -400,7 +402,7 @@ button:active {
 
 #fondo-galeria {
 	background-color: black;
-	opacity: 0.9;
+	opacity: 0.3;
 	position: fixed;
 	top: 0;
 	width: 100%;
