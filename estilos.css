@@ -140,25 +140,30 @@ h2:hover {
 	margin-right: 65px;
 	margin-top: 40px;
 }
-img, h1, #datos-matias, .informacion1, .informacion2, .botonera, .portfolio {
+img, h1, .datos-matias, .informacion1, .informacion2, .botonera, .portfolio {
 	animation: fade-in 1.25s ease;
 }
-#datos-matias {
+.datos-matias {
 	width: 145%;
 	background-color: mediumpurple;
 	color: white;
 	border-radius: 35px;
 }
-#datos-matias span {
+@media screen and (max-width: 600px) {
+.datos-matias {
+	width: 100%;
+}
+}
+.datos-matias span {
 	font-weight: 400;
 	font-style: normal;
 }
-#datos-matias ul li {
+.datos-matias ul li {
 	padding-left: 20px;
 	font-weight: 700px;
 	list-style: none;
 }
-#datos-matias ul {
+.datos-matias ul {
 	padding: 20px 0 20px 20px;
 }
 ul {
@@ -239,6 +244,11 @@ a {
 	gap: 70px;
 	font-size: 15pt;
 	margin-top: 10px;
+}
+@media screen and (max-width: 600px) {
+.botonera ul {
+	gap: 10px;
+}
 }
 nav ul {
 	list-style: none;
