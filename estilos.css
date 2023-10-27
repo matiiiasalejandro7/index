@@ -162,7 +162,7 @@ img {
 	margin-top: 50px;
 }
 }
-img, h1, .datos-matias, .informacion1, .informacion2, .botonera, .portfolio {
+img, h1, .videoportfolio, .datos-matias, .informacion1, .informacion2, .botonera, .portfolio {
 	animation: fade-in 1.25s ease;
 }
 .datos-matias {
@@ -497,13 +497,23 @@ button:active {
 	padding: 0px;
 	margin: 0px;
 }
-
+@media screen and (max-width: 600px) {
+.textovideo h2 {
+	font-size: 30pt;
+	justify-content: center;
+}
+}
 .textovideo p{
 	display: flex;
 	padding-right: 3px;
 	align-items: flex-start;
 	gap: 10px;
 	color:#000000;
+}
+@media screen and (max-width: 600px) {
+.textovideo p {
+	justify-content: center;
+}
 }
 
 /* portfolio */
@@ -515,6 +525,22 @@ button:active {
 	max-width: 1920px;
 	width: 100%;
 	padding-left: 100px;
+}
+@media screen and (max-width: 600px) {
+.portfolio {
+	flex-direction: column;
+	padding: 0px;
+}
+}
+@media screen and (max-width: 600px) {
+.columnas-container {
+	display: block;
+}
+}
+@media screen and (max-width: 600px) {
+.columna{
+	width: 100%
+}
 }
 .columna p {
 	padding-right: 100px;
